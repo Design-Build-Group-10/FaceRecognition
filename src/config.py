@@ -8,7 +8,8 @@ Date: 2024.07.03
 Copyright (C) 2024 Wang Zhiwei, Zhao Zheyun. All rights reserved.
 Unauthorized copying of this file, via any medium, is strictly prohibited.
 Proprietary and confidential.
-Contact: wangzw@example.com
+Contact: 2022213670@bupt.cn
+Contact: 2022213682@bupt.cn
 """
 
 CHROMA_SERVICE_HOST = '82.156.184.46'
