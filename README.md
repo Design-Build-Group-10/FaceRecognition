@@ -396,19 +396,19 @@ ArcFace introduces a margin in the target class’s angle, making the features o
 
 #### Mathematical Expression
 
-ArcFace modifies the decision boundary in the Softmax formula by adjusting the angle margin between class centers to increase class separability. Specifically, for each training sample $ x_i $ with label $ y_i $, the traditional Softmax loss can be expressed as:
+ArcFace modifies the decision boundary in the Softmax formula by adjusting the angle margin between class centers to increase class separability. Specifically, for each training sample $x_i$ with label $y_i$, the traditional Softmax loss can be expressed as:
 
 $$
 L = -\frac{1}{N} \sum_{i=1}^N \log \frac{e^{W_{y_i}^T x_i + b_{y_i}}}{\sum_{j=1}^C e^{W_j^T x_i + b_j}}
 $$
 
-where $ W_j $ and $ b_j $ are the weight and bias parameters, and $ C $ is the number of classes. ArcFace introduces an angular margin $ m $, adjusting the formula to:
+where $W_j$ and $b_j$ are the weight and bias parameters, and $C$ is the number of classes. ArcFace introduces an angular margin $m$, adjusting the formula to:
 
 $$
 L = -\frac{1}{N} \sum_{i=1}^N \log \frac{e^{s (\cos(\theta_{y_i} + m))}}{e^{s (\cos(\theta_{y_i} + m))} + \sum_{j \neq y_i} e^{s \cos \theta_j}}
 $$
 
-where $ \theta_{y_i} $ is the angle between feature $ x_i $ and its corresponding class weight $ W_{y_i} $, and $ s $ is the scaling factor.
+where $\theta_{y_i}$ is the angle between feature $x_i$ and its corresponding class weight $W_{y_i}$, and $s$ is the scaling factor.
 
 #### Features and Advantages
 
